@@ -133,7 +133,7 @@ def video_detail(request, pk):
     plt.ylabel('Amplitude')
     plt.title('Frequency Analysis of Vibration Data')
     plt.grid(True)
-    plt.savefig('path_to_save_plot.png')  # Save the plot as an image
+    plt.savefig(r'media/plots/path_to_save_plot.png')  # Save the plot as an image
     plt.close()  # Close the plot to free up resources
 
-    return render(request, 'video_processing/video_detail.html', {'video': video, 'plot_path': 'path_to_save_plot.png'})
+    return render(request, 'video_processing/video_detail.html', {'video': video, 'plot_path': settings.MEDIA_URL + 'plots/path_to_save_plot.png'})
