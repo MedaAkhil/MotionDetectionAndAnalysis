@@ -1,11 +1,8 @@
 
 {% block content %}
   <h2>Processed Video</h2>
-  <video controls>
-    <source src="{{ video.video.url }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  
   
   <h2>Frequency Analysis Plot</h2>
-  <img src="{{ plot_path }}" alt="Frequency Analysis Plot">
+  <center><img src="{{ plot_path }}" alt="Frequency Analysis Plot"></center>
 {% endblock %}
