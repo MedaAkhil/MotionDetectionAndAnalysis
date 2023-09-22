@@ -58,7 +58,7 @@ def upload_video(request):
 
 
 def video_detail(request, pk):
-    plot_path = settings.MEDIA_URL + 'plots/path_to_save_plot.png'
+    plot_path = settings.MEDIA_URL + 'plots/outplot.png'
     video = get_object_or_404(ProcessedVideo, pk=pk)
 
     # Your video processing code here
@@ -136,4 +136,4 @@ def video_detail(request, pk):
     plt.savefig(r'media/plots/path_to_save_plot.png')  # Save the plot as an image
     plt.close()  # Close the plot to free up resources
 
-    return render(request, 'video_processing/video_detail.html', {'video': video, 'plot_path': settings.MEDIA_URL + 'plots/path_to_save_plot.png'})
+    return render(request, 'video_processing/video_detail.html', {'video': video, 'plot_path': settings.MEDIA_URL + 'plots/outplot.png'})
